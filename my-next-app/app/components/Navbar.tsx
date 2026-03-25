@@ -53,7 +53,7 @@ export default function Navbar() {
             Home {openMenu === "home" ? "▴" : "▾"}
           </button>
 
-          <a href="#about" className="text-sm font-semibold text-slate-700 transition hover:text-emerald-600">About Us</a>
+          <a href="/about" className="text-sm font-semibold text-slate-700 transition hover:text-emerald-600">About Us</a>
 
           <div className="relative"
             onMouseEnter={() => setOpenMenu("services")}
@@ -92,7 +92,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="#contact" className="text-sm font-semibold text-slate-700 transition hover:text-emerald-600">Contact</a>
+          <a href="/contact" className="text-sm font-semibold text-slate-700 transition hover:text-emerald-600">Contact</a>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -125,7 +125,7 @@ export default function Navbar() {
       <div className={`md:hidden ${mobileMenuOpen ? "block" : "hidden"} border-t border-slate-200 bg-white`}>
         <div className="space-y-1 px-4 py-4">
           <a href="#" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">Home</a>
-          <a href="#about" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">About Us</a>
+          <a href="/about" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">2</a>
 
           <button
             type="button"
@@ -140,7 +140,7 @@ export default function Navbar() {
             <MegaMenu open={mobileServicesOpen} onClose={() => setMobileServicesOpen(false)} variant="services" mobileMode />
           )}
 
-          <a href="#contact" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">Contact</a>
+          <a href="/contact" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">Contact</a>
         </div>
       </div>
     </header>

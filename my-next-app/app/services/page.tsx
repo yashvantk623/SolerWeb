@@ -2,7 +2,7 @@ import { getAllServices } from "@/app/data/services";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Our Services | Golden Orchid",
+  title: "Our Services | Volta Solar",
   description: "Comprehensive solar solutions for residential and commercial needs",
 };
 
@@ -42,32 +42,23 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <Link key={service.slug} href={`/services/${service.slug}`}>
-              <div className="group h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-xl">
-                <div className="relative h-48 overflow-hidden">
+              <div className="group h-full cursor-pointer">
+                {/* Image Container with Name Overlay */}
+                <div className="relative h-64 overflow-hidden rounded-xl">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="h-full w-full object-cover transition group-hover:scale-110"
+                    className="h-full w-full object-cover transition group-hover:scale-110 duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-emerald-600">
-                    {service.shortTitle}
-                  </h3>
-                  <p className="mt-2 text-slate-600 line-clamp-2">
-                    {service.description}
-                  </p>
-
-                  <div className="mt-4 flex items-center gap-2 text-emerald-600 font-semibold">
-                    <span>Learn More</span>
-                    <span className="transition group-hover:translate-x-1">
-                      →
-                    </span>
+                  
+                  {/* Dark Overlay at Bottom */}
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent h-24 flex items-end">
+                    <h3 className="w-full text-center text-white font-bold text-lg pb-4 group-hover:text-emerald-300 transition">
+                      {service.shortTitle}
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -77,33 +68,151 @@ export default function ServicesPage() {
 
         {/* Why Choose Us */}
         <section className="mt-20 rounded-3xl bg-gradient-to-r from-emerald-50 to-cyan-50 p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-slate-900">
-            Why Choose Golden Orchid?
-          </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Expert Team",
-                description: "10+ years of solar industry experience",
-              },
-              {
-                title: "Quality Products",
-                description: "Premium panels and components",
-              },
-              {
-                title: "Fast Installation",
-                description: "Quick turnaround without compromising quality",
-              },
-              {
-                title: "24/7 Support",
-                description: "Always available for your assistance",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="rounded-xl bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{item.description}</p>
-              </div>
-            ))}
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-slate-900">
+              Why Choose Volta Solar
+            </h2>
+            <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Lucknow, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
+            <ul className="mt-6 space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold">✔</span>
+                <span className="text-slate-700">Local licensed team & quick permits</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold">✔</span>
+                <span className="text-slate-700">Tier-1 panels, hybrid inverters, high-capacity batteries</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-600 font-bold">✔</span>
+                <span className="text-slate-700">Managed installation, commissioning, and monitoring according to Volta Solar</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="mt-20">
+          <div className="mb-12 text-center">
+            <p className="text-emerald-600 font-semibold text-sm uppercase tracking-wide">Pricing & Plan</p>
+            <h2 className="text-4xl font-bold text-slate-900 mt-2">
+              Our Solar Panels Prices
+            </h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* 3 KVA Plan */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-slate-900">3 KVA</h3>
+              <p className="text-slate-600 text-sm mt-1">1 Home</p>
+              <p className="text-4xl font-bold text-slate-900 mt-6">₹195000</p>
+              
+              <ul className="mt-8 space-y-4">
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Maintenance</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">25 Years Warranty</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Installation</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Subsidy</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Approval By UPPCL</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">New Meter + Savings</span>
+                </li>
+              </ul>
+
+              <button className="w-full mt-8 bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg transition">
+                Get Started
+              </button>
+            </div>
+
+            {/* 4 KVA Plan */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-slate-900">4 KVA</h3>
+              <p className="text-slate-600 text-sm mt-1">2 Family Home</p>
+              <p className="text-4xl font-bold text-slate-900 mt-6">₹240000</p>
+              
+              <ul className="mt-8 space-y-4">
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Maintenance</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">25 Years Warranty</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Installation</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Subsidy</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Approval By UPPCL</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">New Meter + Savings</span>
+                </li>
+              </ul>
+
+              <button className="w-full mt-8 bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg transition">
+                Get Started
+              </button>
+            </div>
+
+            {/* 5 KVA Plan */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-slate-900">5 KVA</h3>
+              <p className="text-slate-600 text-sm mt-1">3 Family Home</p>
+              <p className="text-4xl font-bold text-slate-900 mt-6">₹300000</p>
+              
+              <ul className="mt-8 space-y-4">
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Maintenance</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">25 Years Warranty</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Installation</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Subsidy</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">Approval By UPPCL</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-teal-500 font-bold">✔</span>
+                  <span className="text-slate-700">New Meter + Savings</span>
+                </li>
+              </ul>
+
+              <button className="w-full mt-8 bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg transition">
+                Get Started
+              </button>
+            </div>
           </div>
         </section>
 
@@ -131,6 +240,14 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
+
+   
+         
+
+
+        
+          
+          
     </>
   );
 }

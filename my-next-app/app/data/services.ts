@@ -13,6 +13,16 @@ export interface Service {
     image?: string;
     items?: string[];
   }[];
+  advantages?: {
+    title: string;
+    subtitle?: string;
+    items: {
+      id: number;
+      title: string;
+      description: string;
+      icon?: string;
+    }[];
+  };
   benefits: {
     title: string;
     description: string;
@@ -29,7 +39,7 @@ export const services: Record<string, Service> = {
   "off-grid": {
     id: "1",
     slug: "off-grid",
-    title: "Off-Grid Solar Panels in Lucknow",
+    title: "Off-Grid Solar Panels in Pan India",
     shortTitle: "Off Grid Solar",
     description: "Standalone photovoltaic systems that generate electricity independently",
     image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1000&q=80",
@@ -72,7 +82,7 @@ export const services: Record<string, Service> = {
   "on-grid": {
     id: "2",
     slug: "on-grid",
-    title: "On Grid Solar Panels In Lucknow",
+    title: "On Grid Solar Panels In Pan India",
     shortTitle: "On Grid Solar",
     description: "Connected solar systems that feed excess power back to the electrical grid",
     image: "https://images.unsplash.com/photo-1523792069685-4b4dcd0f9664?auto=format&fit=crop&w=1000&q=80",
@@ -91,8 +101,42 @@ export const services: Record<string, Service> = {
       {
         title: "How On-Grid Systems Work",
         content: "Your solar panels generate electricity during the day, which is first used to power your home. Excess electricity is sent to the grid, and you receive credits. At night or cloudy days, you draw power from the grid."
+      },
+      {
+        title: "For Whom is On-Grid Solar System the Best Option?",
+        content: "On-grid solar systems are ideal for homeowners and businesses looking to reduce electricity costs while maintaining grid connection."
       }
     ],
+    advantages: {
+      title: "Advantages Of On Grid Solar Panels",
+      subtitle: "You Can Save Your Money & Earth By Using Solar Panels. Golden ACS Provides Best Solar Panel Installation In Pan India At Affordable Prices.",
+      items: [
+        {
+          id: 1,
+          title: "Experiencing Zero",
+          description: "Reduce monthly Electricity bills to Zero.\nProtect against future electricity price hikes,",
+          icon: "⚡"
+        },
+        {
+          id: 2,
+          title: "Earn Money",
+          description: "Low-Cost Investment & quick payback period.\nExport excess solar power generated back to the utility grid to earn passive income.",
+          icon: "💰"
+        },
+        {
+          id: 3,
+          title: "Fit and Forget system",
+          description: "Minimum Maintenance with nearly Zero Recurring Cost.\nSolar panels act as an umbrella to lower the building temperature & keep the environment cool.",
+          icon: "🔧"
+        },
+        {
+          id: 4,
+          title: "Tax Benefits",
+          description: "Accelerated Depreciation Tax Relief for Industries.\nSupportive & proactive Government Policy for Renewable Green Energy Sector.",
+          icon: "📊"
+        }
+      ]
+    },
     benefits: [
       { title: "Reduced Electricity Bills", description: "Lower your monthly power consumption costs significantly" },
       { title: "Government Benefits", description: "Avail of tax credits and government subsidies" },

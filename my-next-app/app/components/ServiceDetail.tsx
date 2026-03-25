@@ -1,6 +1,7 @@
 "use client";
 
 import { Service } from "@/app/data/services";
+import AdvantagesSection from "./AdvantagesSection";
 
 interface ServiceDetailProps {
   service: Service;
@@ -41,8 +42,8 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
           </section>
         )}
 
-        {/* Features/Details Section */}
-        {service.sections.slice(1).map((section, idx) => (
+        {/* Features/Details Section - Only render sections that are NOT the "For Whom" section */}
+        {service.sections.slice(1).filter(section => !section.title.toLowerCase().includes("for whom")).map((section, idx) => (
           <section key={idx} className="mb-16 grid gap-8 md:grid-cols-2">
             <div className="flex flex-col justify-center">
               <h2 className="mb-4 text-3xl font-bold text-slate-900">
@@ -73,7 +74,19 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             )}
           </section>
         ))}
+      </main>
 
+      {/* Advantages Section - Full Width */}
+      {service.advantages && (
+        <AdvantagesSection
+          title={service.advantages.title}
+          subtitle={service.advantages.subtitle}
+          advantages={service.advantages.items}
+        />
+      )}
+
+      {/* Benefits and CTA Section */}
+      <main className="mx-auto w-full max-w-[1260px] px-4 py-16 sm:px-6 lg:px-8">
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="mb-8 text-3xl font-bold text-slate-900">Key Benefits</h2>
