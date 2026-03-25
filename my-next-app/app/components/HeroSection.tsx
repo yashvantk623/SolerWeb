@@ -100,16 +100,19 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="w-full relative">
+    <section className="w-full relative block">
       <div
-        className="relative min-h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/my-hero.png')` }}
+        className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `url('/my-hero.png')`,
+          backgroundAttachment: 'fixed'
+        }}
       >
         {/* 🔥 Strong Overlay for readability */}
         <div className="absolute inset-0 bg-black/50" />
 
         {/* 🔥 Content */}
-        <div className="relative flex items-center min-h-screen px-6 sm:px-12 lg:px-20">
+        <div className="relative flex items-center justify-start w-full min-h-screen px-6 sm:px-12 lg:px-20">
           
           {/* Content Box */}
           <div className="max-w-2xl backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl">

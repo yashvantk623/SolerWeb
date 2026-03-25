@@ -103,43 +103,46 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <main className="w-full px-0 pb-16 pt-0">
+    <div className="w-full bg-slate-50 text-slate-900">
+      <main className="w-full">
         <HeroSection />
-        <OurServices />
-        <ServiceDetailsSection services={serviceDetails} />
-        <BenefitsSection 
-          title="For whom is Solar System the best option?" 
-          benefits={benefits}
-          backgroundColor="bg-blue-600"
-        />
+        
+        <div className="px-4 sm:px-6 lg:px-8 pb-16 pt-0 max-w-full relative z-10 bg-slate-50">
+          <div className="mx-auto w-full max-w-[1260px]">
+            <OurServices />
+            <ServiceDetailsSection services={serviceDetails} />
+            <BenefitsSection 
+              title="For whom is Solar System the best option?" 
+              benefits={benefits}
+              backgroundColor="bg-blue-600"
+            />
 
-        <section className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { label: "Projects Completed", value: "350+" },
-            { label: "Happy Clients", value: "280+" },
-            { label: "Years Experience", value: "7+" },
-            { label: "CO₂ Saved", value: "1,250+ t" }
-          ].map((item) => (
-            <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-              <p className="text-3xl font-extrabold text-emerald-600">{item.value}</p>
-              <p className="mt-2 text-sm font-medium text-slate-600">{item.label}</p>
-            </div>
-          ))}
-        </section>
+            <section className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { label: "Projects Completed", value: "350+" },
+                { label: "Happy Clients", value: "280+" },
+                { label: "Years Experience", value: "7+" },
+                { label: "CO₂ Saved", value: "1,250+ t" }
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                  <p className="text-3xl font-extrabold text-emerald-600">{item.value}</p>
+                  <p className="mt-2 text-sm font-medium text-slate-600">{item.label}</p>
+                </div>
+              ))}
+            </section>
 
-        <section id="about" className="mt-14 grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-2">
-          <div>
-            <h2 className="text-3xl font-extrabold text-slate-900">Why Choose Volta Solar</h2>
-            <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Lucknow, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
-            <ul className="mt-6 space-y-3 text-slate-600">
-              <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Local licensed team & quick permits</li>
-              <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Tier-1 panels, hybrid inverters, high-capacity batteries</li>
-              <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Managed installation, commissioning, and monitoring according to Volta Solar</li>
-            </ul>
-          </div>
-          <div className="relative overflow-hidden rounded-2xl">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Solar installation" className="h-80 w-full object-cover" />
+            <section id="about" className="mt-14 grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-extrabold text-slate-900">Why Choose Volta Solar</h2>
+                <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Lucknow, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
+                <ul className="mt-6 space-y-3 text-slate-600">
+                  <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Local licensed team & quick permits</li>
+                  <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Tier-1 panels, hybrid inverters, high-capacity batteries</li>
+                  <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Managed installation, commissioning, and monitoring according to Volta Solar</li>
+                </ul>
+              </div>
+              <div className="relative overflow-hidden rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Solar installation" className="h-80 w-full object-cover" />
           </div>
         </section>
 
@@ -286,7 +289,9 @@ export default function Home() {
             <button className="md:col-span-2 rounded-full bg-emerald-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-emerald-500">Submit Request</button>
           </form>
         </section>
-      </main>
-    </div>
+        </div>
+      </div>
+    </main>
+  </div>
   );
 }
