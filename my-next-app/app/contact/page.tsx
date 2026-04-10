@@ -129,10 +129,10 @@ export default function ContactPage() {
                   name="type"
                   value={formData.type}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg border border-teal-300 bg-teal-50 text-slate-900 outline-none transition focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-400"
                 >
-                  <option value="contact">Contact / Quotation</option>
-                  <option value="job">Job Application</option>
+                  <option value="contact" className="bg-white text-slate-900">Contact / Quotation</option>
+                  <option value="job" className="bg-white text-slate-900">Job Application</option>
                 </select>
               </div>
               {/* Name Field */}

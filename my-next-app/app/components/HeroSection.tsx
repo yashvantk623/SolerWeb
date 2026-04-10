@@ -110,9 +110,9 @@ export default function HeroSection() {
 
         {/* 🔥 Content */}
         <div className="relative flex min-h-screen items-center justify-start px-6 sm:px-12 lg:px-20">
-          <div className="mx-auto w-full max-w-[1280px]">
+          <div className="w-full max-w-2xl">
             {/* Content Box */}
-            <div className="max-w-2xl backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl">
+            <div className="backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl lg:mr-auto">
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight">
               Powering India with{" "}
