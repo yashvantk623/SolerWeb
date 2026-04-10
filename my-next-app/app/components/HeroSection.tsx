@@ -102,17 +102,20 @@ export default function HeroSection() {
   return (
     <section className="w-full relative">
       <div
-        className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/my-hero.png')` }}
+        className="relative w-full min-h-screen bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url('/my-hero.png')`,
+          backgroundPosition: 'left center'
+        }}
       >
         {/* 🔥 Strong Overlay for readability */}
         <div className="absolute inset-0 bg-black/50" />
 
         {/* 🔥 Content */}
-        <div className="relative flex min-h-screen items-center justify-start px-6 sm:px-12 lg:px-20">
-          <div className="w-full max-w-2xl">
+        <div className="relative flex min-h-screen items-center justify-start px-6 sm:px-12 lg:px-24">
+          <div className="w-full lg:max-w-[660px]">
             {/* Content Box */}
-            <div className="backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl lg:mr-auto">
+            <div className="backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl">
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight">
               Powering India with{" "}
