@@ -100,23 +100,19 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="w-full relative block">
+    <section className="w-full relative">
       <div
         className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: `url('/my-hero.png')`,
-          backgroundAttachment: 'fixed'
-        }}
+        style={{ backgroundImage: `url('/my-hero.png')` }}
       >
         {/* 🔥 Strong Overlay for readability */}
         <div className="absolute inset-0 bg-black/50" />
 
         {/* 🔥 Content */}
-        <div className="relative flex items-center justify-start w-full min-h-screen px-6 sm:px-12 lg:px-20">
-          
-          {/* Content Box */}
-          <div className="max-w-2xl backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl">
-
+        <div className="relative flex min-h-screen items-center justify-start px-6 sm:px-12 lg:px-20">
+          <div className="mx-auto w-full max-w-[1280px]">
+            {/* Content Box */}
+            <div className="max-w-2xl backdrop-blur-sm bg-white/5 p-8 sm:p-10 rounded-2xl border border-white/10 shadow-xl">
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight">
               Powering India with{" "}
@@ -127,6 +123,13 @@ export default function HeroSection() {
             <div className="mt-6 mb-6 h-10 flex items-center">
               <span className="px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm sm:text-base font-semibold tracking-wide transition-all duration-500">
                 {features[currentFeature]}
+              </span>
+            </div>
+
+            {/* Service Area Badge */}
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-200 rounded-full text-xs sm:text-sm font-semibold">
+                🌍 Serving Uttar Pradesh & Haryana
               </span>
             </div>
 

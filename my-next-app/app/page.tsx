@@ -1,11 +1,60 @@
 ﻿"use client";
 
+import { useState } from "react";
 import HeroSection from "./components/HeroSection";
 import OurServices from "./components/OurServices";
 import ServiceDetailsSection from "./components/ServiceDetailsSection";
 import BenefitsSection from "./components/BenefitsSection";
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    message: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: `City/Area: ${formData.city}\n\nProject Details:\n${formData.message}`,
+          position: ''
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Thank you for your inquiry! We will get back to you soon.");
+        setFormData({ name: "", email: "", phone: "", city: "", message: "" });
+      } else {
+        const errorDetail = data.error || data.message || "Unknown error";
+        alert(`Failed to send message: ${errorDetail}`);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("An error occurred. Please check your connection and try again.");
+    }
+  };
   const benefits = [
     {
       id: 1,
@@ -134,7 +183,7 @@ export default function Home() {
             <section id="about" className="mt-14 grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-extrabold text-slate-900">Why Choose Volta Solar</h2>
-                <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Lucknow, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
+                <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Haryana and Uttar Pradesh, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
                 <ul className="mt-6 space-y-3 text-slate-600">
                   <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Local licensed team & quick permits</li>
                   <li className="rounded-lg bg-emerald-50 px-4 py-3">✔ Tier-1 panels, hybrid inverters, high-capacity batteries</li>
@@ -279,14 +328,59 @@ export default function Home() {
         <section id="contact" className="mt-14 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
           <h3 className="text-3xl font-bold text-slate-900">Ready to go solar?</h3>
           <p className="mt-2 text-slate-600">Request free site evaluation and personalized ROI report.</p>
-          <p className="mt-2 text-sm text-slate-500">Phone: <a href="tel:+918700459880" className="text-emerald-600 hover:underline">+91 8700459880</a> • Email: <a href="mailto:Email-voltasolar93@gmail.com" className="text-emerald-600 hover:underline">Email-voltasolar93@gmail.com</a></p>
-          <form className="mt-6 grid gap-4 md:grid-cols-2">
-            <input type="text" placeholder="Full Name" className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" />
-            <input type="email" placeholder="Email" className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" />
-            <input type="tel" placeholder="Phone" className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" />
-            <input type="text" placeholder="City / Area" className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" />
-            <textarea placeholder="Project details" rows={4} className="md:col-span-2 rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500"></textarea>
-            <button className="md:col-span-2 rounded-full bg-emerald-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-emerald-500">Submit Request</button>
+          <p className="mt-2 text-sm text-slate-500">WhatsApp: <a href="https://wa.me/918700459880" className="text-emerald-600 hover:underline">+91 8700459880</a> • Email: <a href="mailto:Email-voltasolar93@gmail.com" className="text-emerald-600 hover:underline">Email-voltasolar93@gmail.com</a></p>
+          <form onSubmit={handleSubmit} className="mt-6 grid gap-4 md:grid-cols-2">
+            <input 
+              type="text" 
+              name="name"
+              placeholder="Full Name" 
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" 
+            />
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Email" 
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" 
+            />
+            <input 
+              type="tel" 
+              name="phone"
+              placeholder="Phone" 
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" 
+            />
+            <input 
+              type="text" 
+              name="city"
+              placeholder="City / Area" 
+              value={formData.city}
+              onChange={handleChange}
+              required
+              className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500" 
+            />
+            <textarea 
+              name="message"
+              placeholder="Project details" 
+              rows={4} 
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="md:col-span-2 rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-emerald-500">
+            </textarea>
+            <button 
+              type="submit"
+              className="md:col-span-2 rounded-full bg-emerald-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-emerald-500"
+            >
+              Submit Request
+            </button>
           </form>
         </section>
         </div>

@@ -13,8 +13,16 @@ export default function AboutPage() {
             </h1>
             
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Volta Solar is one of the most experienced players in India relatively young and fast-growing solar industry. We provide a full suite of solar photovoltaic (PV) services for the commercial and wholesale distributed generation markets: development, design, engineering, procurement, and construction (EPC) and operations and maintenance (O&M). At Volta Solar, we aim to make clean, reliable solar energy accessible to everyone. We are committed to protecting the environment and spearheading industry-wide changes with groundbreaking and innovative research and development.
+              Volta Solar is one of the most experienced players in India's relatively young and fast-growing solar industry. Serving <strong>Uttar Pradesh & Haryana</strong>, we provide a full suite of solar photovoltaic (PV) services for the commercial and wholesale distributed generation markets: development, design, engineering, procurement, and construction (EPC) and operations and maintenance (O&M). At Volta Solar, we aim to make clean, reliable solar energy accessible to everyone. We are committed to protecting the environment and spearheading industry-wide changes with groundbreaking and innovative research and development.
             </p>
+
+            {/* Service Area Highlight */}
+            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-r-lg mb-8">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">🌍 Our Service Area</h3>
+              <p className="text-slate-700">
+                We proudly serve residential, commercial, and industrial customers throughout <strong>Uttar Pradesh</strong> and <strong>Haryana</strong>, with strong presence in major cities and regions across both states.
+              </p>
+            </div>
 
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">

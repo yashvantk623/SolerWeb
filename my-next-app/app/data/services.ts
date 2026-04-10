@@ -152,7 +152,7 @@ export const services: Record<string, Service> = {
   "installation": {
     id: "3",
     slug: "installation",
-    title: "Solar Panel Installation In Lucknow",
+    title: "Solar Panel Installation In Haryana & Uttar Pradesh",
     shortTitle: "Installation",
     description: "Professional solar panel installation services for residential and commercial properties",
     image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1000&q=80",
@@ -165,7 +165,7 @@ export const services: Record<string, Service> = {
     ],
     sections: [
       {
-        title: "We Provide All Types Of Solar Panel Installation In Lucknow",
+        title: "We Provide All Types Of Solar Panel Installation In Haryana & Uttar Pradesh",
         content: "Our experienced team specializes in both on-grid and off-grid solar panel installation services. We handle everything from site assessment to commissioning."
       },
       {
@@ -196,7 +196,7 @@ export const services: Record<string, Service> = {
   "commercial": {
     id: "4",
     slug: "commercial",
-    title: "Commercial Solar Panel in Lucknow",
+    title: "Commercial Solar Panel in Haryana & Uttar Pradesh",
     shortTitle: "Commercial Solar",
     description: "Large-scale solar solutions for businesses, industries and commercial establishments",
     image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1000&q=80",
@@ -210,7 +210,7 @@ export const services: Record<string, Service> = {
     sections: [
       {
         title: "Commercial Solar Panel Installation",
-        content: "As a leading provider of commercial solar panels in Lucknow, we deliver customized solutions for your business needs with professional installation and ongoing support."
+        content: "As a leading provider of commercial solar panels in Haryana & Uttar Pradesh, we deliver customized solutions for your business needs with professional installation and ongoing support."
       },
       {
         title: "Benefits of Commercial Solar",
@@ -239,7 +239,7 @@ export const services: Record<string, Service> = {
   "hybrid": {
     id: "5",
     slug: "hybrid",
-    title: "Hybrid Solar Plants in Lucknow",
+    title: "Hybrid Solar Plants in Haryana & Uttar Pradesh",
     shortTitle: "Hybrid Solar",
     description: "Advanced solar systems combining grid connection with battery backup for uninterrupted power",
     image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1000&q=80",
@@ -282,7 +282,7 @@ export const services: Record<string, Service> = {
   "amc": {
     id: "6",
     slug: "amc",
-    title: "Reliable Solar Panel AMC Services in Lucknow",
+    title: "Reliable Solar Panel AMC Services in Haryana & Uttar Pradesh",
     shortTitle: "Solar AMC",
     description: "Comprehensive Annual Maintenance Contract services for solar systems",
     image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1000&q=80",
@@ -295,7 +295,7 @@ export const services: Record<string, Service> = {
     ],
     sections: [
       {
-        title: "Expert Solar Panel AMC Services in Lucknow",
+        title: "Expert Solar Panel AMC Services in Haryana & Uttar Pradesh",
         content: "Our expert technical team provides comprehensive maintenance and repair services to ensure your solar system operates at peak performance with maximum lifespan."
       },
       {

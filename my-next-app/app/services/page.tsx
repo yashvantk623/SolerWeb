@@ -72,7 +72,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-bold text-slate-900">
               Why Choose Volta Solar
             </h2>
-            <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Lucknow, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
+            <p className="mt-4 text-lg text-slate-700">As a leading solar partner in Haryana & Uttar Pradesh, we deliver end-to-end, future-ready systems backed by performance warranties and 24/7 support.</p>
             <ul className="mt-6 space-y-3">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold">✔</span>

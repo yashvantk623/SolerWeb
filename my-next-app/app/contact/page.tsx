@@ -4,12 +4,15 @@ import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
+    type: "contact",
     name: "",
     email: "",
-    message: ""
+    phone: "",
+    message: "",
+    position: ""
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -17,12 +20,30 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Thank you for your inquiry! We will get back to you soon.");
+        setFormData({ type: "contact", name: "", email: "", phone: "", message: "", position: "" });
+      } else {
+        const errorDetail = data.error || data.message || "Unknown error";
+        alert(`Failed to send message: ${errorDetail}`);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("An error occurred. Please check your connection and try again.");
+    }
   };
 
   return (
@@ -37,14 +58,14 @@ export default function ContactPage() {
             </h1>
             
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Have questions about our solar solutions? We're here to help! Get in touch with our team of solar experts to discuss your energy needs and find the perfect solution for your home or business.
+              Have questions about our solar solutions? We're here to help! Get in touch with our team of solar experts to discuss your energy needs and find the perfect solution for your home or business across Uttar Pradesh and Haryana.
             </p>
 
             <div className="space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">📞 Call Us</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">� WhatsApp Us</h3>
                 <p className="text-slate-700">
-                  <a href="tel:+919335935751" className="text-teal-600 hover:text-teal-700 font-semibold">
+                  <a href="https://wa.me/919335935751" className="text-teal-600 hover:text-teal-700 font-semibold">
                     +91 9335935751
                   </a>
                 </p>
@@ -60,10 +81,22 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">📍 Visit Us</h3>
-                <p className="text-slate-700">
-                  {/* Office No.345, 1st Floor B-Block Chauroha, opposite Sai temple, Indira Nagar, Lucknow, Uttar Pradesh 226016 */}
-                Pan India
+                <h3 className="text-lg font-bold text-slate-900 mb-2">📍 Service Coverage</h3>
+                <p className="text-slate-700 font-semibold mb-2">
+                  We proudly serve <strong>Uttar Pradesh</strong> & <strong>Haryana</strong>
+                </p>
+                <p className="text-sm text-slate-600">
+                  Including major cities and regions across both states
+                </p>
+              </div>
+
+              <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
+                <h3 className="text-lg font-bold text-slate-900 mb-2">🌍 Service Coverage</h3>
+                <p className="text-slate-700 font-semibold mb-2">
+                  We serve <strong>Uttar Pradesh</strong> & <strong>Haryana</strong>
+                </p>
+                <p className="text-sm text-slate-600">
+                  Including: Major cities, towns, and surrounding areas in both states
                 </p>
               </div>
             </div>
@@ -86,6 +119,22 @@ export default function ContactPage() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Type Field */}
+              <div>
+                <label htmlFor="type" className="block text-sm font-medium text-slate-700 mb-2">
+                  Inquiry Type
+                </label>
+                <select
+                  id="type"
+                  name="type"
+                  value={formData.type}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                >
+                  <option value="contact">Contact / Quotation</option>
+                  <option value="job">Job Application</option>
+                </select>
+              </div>
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
@@ -119,6 +168,41 @@ export default function ContactPage() {
                   placeholder="Enter your email"
                 />
               </div>
+
+              {/* Phone Field */}
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                  Your phone (optional)
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              {/* Position Field - only for job applications */}
+              {formData.type === "job" && (
+                <div>
+                  <label htmlFor="position" className="block text-sm font-medium text-slate-700 mb-2">
+                    Position Applied For
+                  </label>
+                  <input
+                    type="text"
+                    id="position"
+                    name="position"
+                    value={formData.position}
+                    onChange={handleChange}
+                    required={formData.type === "job"}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    placeholder="Enter the position you're applying for"
+                  />
+                </div>
+              )}
 
               {/* Message Field */}
               <div>

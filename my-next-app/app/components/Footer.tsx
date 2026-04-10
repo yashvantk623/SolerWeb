@@ -109,7 +109,7 @@
 //                 </a>
 //               </li>
 //               <li className="text-gray-400">
-//                 📍 Lucknow, Uttar Pradesh
+//                 📍 Haryana & Uttar Pradesh
 //               </li>
 //             </ul>
 //           </div>
@@ -165,9 +165,9 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-4">
-            <a className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500 text-white hover:bg-teal-600">f</a>
+            <a href="https://www.facebook.com/share/18MyEiYVAq/" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500 text-white hover:bg-teal-600 transition" title="Facebook">f</a>
+            <a href="https://www.instagram.com/voltasolar2024?igsh=MTN4MGtrdTBlMHdtaA==" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500 text-white hover:bg-teal-600 transition" title="Instagram">📷</a>
             <a className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500 text-white hover:bg-teal-600">𝕏</a>
-            <a className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500 text-white hover:bg-teal-600">T</a>
           </div>
         </div>
 
@@ -177,9 +177,16 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Volta Solar</h3>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 mb-4">
               Providing sustainable solar solutions for a brighter future.
             </p>
+            <div className="bg-emerald-900/50 p-3 rounded-lg">
+              <p className="text-xs text-emerald-200 font-semibold mb-1">🌍 Service Areas:</p>
+              <p className="text-sm text-gray-300">
+                <strong>Uttar Pradesh</strong> & <strong>Haryana</strong>
+              </p>
+              <p className="text-xs text-gray-400 mt-2">Major cities and regions across both states</p>
+            </div>
           </div>
 
           {/* Links */}
@@ -223,9 +230,9 @@ export default function Footer() {
           </p>
 
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-sm hover:text-white">Privacy Policy</Link>
-            <Link href="#" className="text-sm hover:text-white">Terms</Link>
-            <Link href="#" className="text-sm hover:text-white">Contact</Link>
+            <Link href="/privacy-policy" className="text-sm hover:text-white">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="text-sm hover:text-white">Terms</Link>
+            <Link href="/contact" className="text-sm hover:text-white">Contact</Link>
           </div>
         </div>
 

@@ -44,6 +44,10 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
+          <div className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+            🌍 Serving UP & Haryana
+          </div>
+
           <button
             type="button"
             onClick={() => setOpenMenu(openMenu === "home" ? "none" : "home")}
@@ -93,6 +97,8 @@ export default function Navbar() {
           </div>
 
           <a href="/contact" className="text-sm font-semibold text-slate-700 transition hover:text-emerald-600">Contact</a>
+
+          <a href="/blog" className="text-sm font-semibold text-slate-700 transition hover:text-emerald-600">Blog</a>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -125,7 +131,7 @@ export default function Navbar() {
       <div className={`md:hidden ${mobileMenuOpen ? "block" : "hidden"} border-t border-slate-200 bg-white`}>
         <div className="space-y-1 px-4 py-4">
           <a href="#" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">Home</a>
-          <a href="/about" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">2</a>
+          <a href="/about" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">About Us</a>
 
           <button
             type="button"
@@ -141,6 +147,8 @@ export default function Navbar() {
           )}
 
           <a href="/contact" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">Contact</a>
+
+          <a href="/blog" className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50">Blog</a>
         </div>
       </div>
     </header>
