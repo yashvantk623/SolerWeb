@@ -195,6 +195,29 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Subsidy & Loan Section */}
+        <section id="subsidy" className="mt-10">
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-6 shadow-sm max-w-4xl mx-auto">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold">i</div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-extrabold text-emerald-900">Government Subsidy & Loan (3 kW)</h3>
+                <p className="mt-2 text-slate-700">Government subsidy and easy finance options are available for a 3 kW system — see details below:</p>
+                <ul className="mt-3 space-y-2 text-slate-700">
+                  <li>• Total subsidy: <strong>Up to ₹1,08,000</strong></li>
+                  <li>• Central government: <strong>₹78,000/-</strong></li>
+                  <li>• State government (UP): <strong>₹30,000/-</strong></li>
+                  <li>• Finance from government banks: <strong>Available at 7% annual interest</strong> (terms may vary by bank)</li>
+                </ul>
+                <p className="mt-3 text-sm text-slate-600">Note: Actual subsidy and loan terms depend on location, consumer category (residential/agricultural), and required documentation. Contact us for assistance with subsidy claims and loan processing.</p>
+                <a href="/contact" className="inline-block mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-lg">Contact for subsidy</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section className="mt-16">
           <div className="mb-12 text-center">
