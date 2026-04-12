@@ -195,24 +195,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Subsidy & Loan Section */}
+        {/* Subsidy & Loan Section (UP Govt + Loan Update) */}
         <section id="subsidy" className="mt-10">
           <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-6 shadow-sm max-w-4xl mx-auto">
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
-                <div className="h-14 w-14 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold">i</div>
+                <div className="h-14 w-14 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold">🚀</div>
               </div>
               <div>
-                <h3 className="text-2xl font-extrabold text-emerald-900">Government Subsidy & Loan (3 kW)</h3>
-                <p className="mt-2 text-slate-700">Government subsidy and easy finance options are available for a 3 kW system — see details below:</p>
-                <ul className="mt-3 space-y-2 text-slate-700">
-                  <li>• Total subsidy: <strong>Up to ₹1,08,000</strong></li>
-                  <li>• Central government: <strong>₹78,000/-</strong></li>
-                  <li>• State government (UP): <strong>₹30,000/-</strong></li>
-                  <li>• Finance from government banks: <strong>Available at 7% annual interest</strong> (terms may vary by bank)</li>
-                </ul>
-                <p className="mt-3 text-sm text-slate-600">Note: Actual subsidy and loan terms depend on location, consumer category (residential/agricultural), and required documentation. Contact us for assistance with subsidy claims and loan processing.</p>
-                <a href="/contact" className="inline-block mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-lg">Contact for subsidy</a>
+                <h3 className="text-2xl font-extrabold text-emerald-900">UP Govt Solar Subsidy + Easy Loan Update</h3>
+                <p className="mt-2 text-slate-700">Stop worrying about money — make your home a Power House with Volta Solar. UP Government and Central Government are offering significant subsidies.</p>
+                <div className="mt-3 space-y-2 text-slate-700">
+                  <p className="font-semibold">💰 Subsidy Highlights:</p>
+                  <ul className="list-inside list-disc ml-4">
+                    <li>2 kW System: ₹90,000 total subsidy</li>
+                    <li>3 kW &amp; above: ₹1,08,000 total subsidy (Center: ₹78,000 + UP State: ₹30,000)</li>
+                  </ul>
+
+                  <p className="font-semibold mt-3">🏦 Government Loan Facility (Low Interest):</p>
+                  <ul className="list-inside list-disc ml-4">
+                    <li>Collateral-free loan: get finance without pledging assets</li>
+                    <li>Low interest rate: around 7% p.a. (repo-rate linked; bank terms may vary)</li>
+                    <li>Easy EMIs: designed to be lower than your expected electricity savings</li>
+                  </ul>
+                </div>
+                <p className="mt-3 text-sm text-slate-600">Do not wait — reduce your electricity bill to near zero and benefit from subsidies and low-interest loans. We help with subsidy claims and loan processing.</p>
+                <a href="/contact" className="inline-block mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-lg">Contact us for subsidy & loan</a>
               </div>
             </div>
           </div>
