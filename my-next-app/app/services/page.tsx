@@ -285,7 +285,7 @@ export const metadata: Metadata = {
   ],
 
    icons: {
-    icon: "/public/volta-solar.png",
+    icon: "/volta-solar.png",
   },
   alternates: {
     canonical: "https://voltasolar.in/services",
