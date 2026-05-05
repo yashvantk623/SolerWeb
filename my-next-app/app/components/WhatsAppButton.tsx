@@ -1,8 +1,17 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "8700459880";
+  const rawPhone = "8700459880";
+  const defaultCountry = "91"; // change this if your primary country code differs
   const message = "Hello! I'm interested in your solar solutions.";
+
+  const normalizePhone = (p: string) => {
+    const digits = p.replace(/\D/g, "");
+    if (digits.length === 10) return `${defaultCountry}${digits}`;
+    return digits;
+  };
+
+  const phoneNumber = normalizePhone(rawPhone);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
