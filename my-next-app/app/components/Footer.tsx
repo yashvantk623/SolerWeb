@@ -215,7 +215,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="tel:+919335935751">📞 +91 9335935751</a></li>
+              <li><a href="tel:+919311757497">📞 +91 9311757497</a></li>
               <li><a href="mailto:team@voltasolar.com">✉️ team@voltasolar.com</a></li>
               <li>📍 Pan India</li>
             </ul>
