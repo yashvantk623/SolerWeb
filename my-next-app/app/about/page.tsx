@@ -285,8 +285,8 @@ Pan India
             <div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">Contact No</h3>
               <p className="text-slate-700">
-                <a href="tel:+919335935751" className="text-teal-600 hover:text-teal-700 font-semibold">
-                  +91 9335935751
+                <a href="tel:+919311757497" className="text-teal-600 hover:text-teal-700 font-semibold">
+                  +91 9311757497
                 </a>
               </p>
             </div>

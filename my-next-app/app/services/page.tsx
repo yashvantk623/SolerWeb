@@ -330,7 +330,7 @@ const localBusinessSchema = {
   description:
     "Volta Solar is a leading solar panel installation company serving Noida, Gurugram, Greater Noida, Ghaziabad and all of Uttar Pradesh & Haryana with residential and commercial solar solutions.",
   url: "https://voltasolar.in",
-  telephone: "+919335935751",
+  telephone: "+919311757497",
   areaServed: [
     { "@type": "City", name: "Noida" },
     { "@type": "City", name: "Greater Noida" },
@@ -506,10 +506,10 @@ export default function ServicesPage() {
                 Get Free Site Survey
               </a>
               <a
-                href="tel:+919335935751"
+                href="tel:+919311757497"
                 className="rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white/10"
               >
-                📞 +91 93359 35751
+                📞 +91 9311757497
               </a>
             </div>
           </div>
@@ -688,7 +688,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
               <a
-                href="tel:+919335935751"
+                href="tel:+919311757497"
                 className="mt-8 block rounded-xl bg-white py-3 text-center font-bold text-emerald-700 transition hover:bg-emerald-50"
               >
                 Check Your City — Call Now
@@ -961,7 +961,7 @@ export default function ServicesPage() {
                 </ul>
 
                 <a
-                  href="tel:+919335935751"
+                  href="tel:+919311757497"
                   className={`mt-8 block w-full rounded-lg py-3 text-center font-semibold transition ${
                     plan.popular
                       ? "bg-emerald-600 text-white hover:bg-emerald-700"
@@ -1068,10 +1068,10 @@ export default function ServicesPage() {
               Get Free Quote &amp; Subsidy Check
             </a>
             <a
-              href="tel:+919335935751"
+              href="tel:+919311757497"
               className="rounded-full border-2 border-white px-8 py-3 font-semibold text-white transition hover:bg-white/10"
             >
-              📞 Call: +91 93359 35751
+              📞 Call: +91 9311757497
             </a>
           </div>
         </section>

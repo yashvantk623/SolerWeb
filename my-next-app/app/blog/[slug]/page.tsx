@@ -185,7 +185,7 @@ export default function BlogDetail() {
             >
               Get Free Site Audit
             </a>
-            <p className="text-emerald-100 text-sm mt-4">📞 Or call us: +91 9335935751</p>
+            <p className="text-emerald-100 text-sm mt-4">📞 Or call us: +91 9311757497</p>
           </div>
         </div>
 

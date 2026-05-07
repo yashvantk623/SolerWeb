@@ -182,7 +182,7 @@ export default function PrivacyPolicy() {
           </p>
           <div className="bg-gray-100 p-6 rounded-lg">
             <p className="text-gray-700"><strong>Email:</strong> team@voltasolar.com</p>
-            <p className="text-gray-700"><strong>Phone:</strong> 9335935751</p>
+            <p className="text-gray-700"><strong>Phone:</strong> 9311757497</p>
           </div>
           <p className="text-gray-700 leading-relaxed mt-4">
             All grievances will be acknowledged and addressed within the timelines prescribed under applicable laws.
@@ -207,7 +207,7 @@ export default function PrivacyPolicy() {
             <p className="text-gray-800 font-semibold mb-3">Volta Solar</p>
             <ul className="space-y-2 text-gray-700">
               <li><strong>📧 Email:</strong> team@voltasolar.com</li>
-              <li><strong>📞 Phone:</strong> 9335935751</li>
+              <li><strong>📞 Phone:</strong> 9311757497</li>
               <li><strong>🌐 Website:</strong> https://voltasolar.in</li>
             </ul>
           </div>

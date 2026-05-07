@@ -65,9 +65,9 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">� WhatsApp Us</h3>
                 <p className="text-slate-700">
-                  <a href="https://wa.me/919335935751" className="text-teal-600 hover:text-teal-700 font-semibold">
-                    +91 9335935751
-                  </a>
+                    <a href="https://wa.me/919311757497" className="text-teal-600 hover:text-teal-700 font-semibold">
+                      +91 9311757497
+                    </a>
                 </p>
               </div>
 
@@ -264,7 +264,7 @@ export default function ContactPage() {
               Get Free Quote
             </a>
             <a
-              href="tel:+919335935751"
+              href="tel:+919311757497"
               className="rounded-full border-2 border-white px-8 py-3 font-semibold text-white transition hover:bg-white/10"
             >
               Call Now
