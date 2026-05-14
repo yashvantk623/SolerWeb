@@ -1076,6 +1076,13 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
+
+      <footer className="mt-8 border-t border-slate-200 py-6">
+        <div className="mx-auto max-w-[1260px] px-4 text-center text-sm text-slate-500">
+          Developed by Yashvant yadav 8299882375
+        </div>
+      </footer>
+
     </>
   );
 }

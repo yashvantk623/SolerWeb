@@ -225,9 +225,10 @@ export default function Footer() {
 
         {/* 🔹 Bottom Footer */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400">
-            © 2024 Volta Solar. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-sm text-gray-400">© 2024 Volta Solar. All rights reserved.</p>
+            <p className="text-xs text-gray-500 mt-2">Developed by Yashvant yadav 8299882375</p>
+          </div>
 
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="text-sm hover:text-white">Privacy Policy</Link>
